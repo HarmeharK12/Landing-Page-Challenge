@@ -37,11 +37,13 @@ addToCartButtons.forEach((button) => {
 });
 
 const newsletterForm = document.getElementById('newsletterForm');
-newsletterForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const emailInput = newsletterForm.querySelector('input');
-  if (emailInput.value.trim()) {
-    alert('Thank you! Your Prime trial invitation has been sent.');
-    emailInput.value = '';
-  }
-});
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const emailInput = newsletterForm.querySelector('input');
+    if (emailInput && emailInput.value.trim()) {
+      alert('Thank you! Your Prime trial invitation has been sent.');
+      emailInput.value = '';
+    }
+  });
+}
