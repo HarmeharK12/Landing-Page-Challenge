@@ -49,8 +49,12 @@ select {
 }
 
 .site-header.scrolled {
-  background: rgba(19, 25, 33, 0.96);
+  background: #131921;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.24);
+}
+
+.site-header.scrolled .header-top {
+  background: #131921;
 }
 
 .header-top {
