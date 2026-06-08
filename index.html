@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Landing Page Challenge</title>
+  <link rel="stylesheet" href="challenge.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="#" class="logo" aria-label="Amazon logo">
+        <span class="logo-mark">a</span>
+        <span class="logo-text">mazon</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="top-nav" id="topNav">
+        <a href="#">All</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Prime</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Gift Ideas</a>
+      </nav>
+      <div class="search-bar">
+        <select aria-label="Search category">
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Clothing</option>
+          <option>Home</option>
+          <option>Beauty</option>
+        </select>
+        <input type="search" id="searchInput" placeholder="Search Amazon" aria-label="Search Amazon" />
+        <button id="searchButton" aria-label="Search">Search</button>
+      </div>
+      <div class="header-actions">
+        <div class="nav-item">
+          <span class="nav-line-1">Hello, Sign in</span>
+          <span class="nav-line-2">Account & Lists</span>
+        </div>
+        <div class="nav-item">
+          <span class="nav-line-1">Returns</span>
+          <span class="nav-line-2">& Orders</span>
+        </div>
+        <div class="cart">
+          <span class="cart-count" id="cartCount">0</span>
+          <span>Cart</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Shop today & save</p>
+        <h1>Find everything from electronics to home essentials.</h1>
+        <p>Discover fast delivery, exclusive deals, and curated picks for every budget.</p>
+        <div class="hero-actions">
+          <a href="#products" class="primary-button">Shop Deals</a>
+          <a href="#featured" class="secondary-button">Explore Prime</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1526178610270-7d3c23d5a55c?auto=format&fit=crop&w=900&q=80" alt="Shopping and delivery" />
+      </div>
+    </section>
+
+    <section class="callouts">
+      <div class="callout-card">
+        <h3>Free delivery</h3>
+        <p>On millions of items with Prime.</p>
+      </div>
+      <div class="callout-card">
+        <h3>Today's Deals</h3>
+        <p>New discounts added hourly.</p>
+      </div>
+      <div class="callout-card">
+        <h3>Easy returns</h3>
+        <p>Hassle-free returns on eligible items.</p>
+      </div>
+    </section>
+
+    <section class="featured-section" id="featured">
+      <div class="section-header">
+        <h2>Featured picks for you</h2>
+        <p>Selected based on trending shopping trends.</p>
+      </div>
+      <div class="featured-grid">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=500&q=80" alt="Smart home speaker" />
+          <h3>Smart Speaker</h3>
+          <p>Voice control, premium sound, and smart home integration.</p>
+          <span class="price">$79.99</span>
+          <button class="add-to-cart" data-item="Smart Speaker">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=500&q=80" alt="Wireless headphones" />
+          <h3>Wireless Headphones</h3>
+          <p>Noise-cancelling comfort for long listening sessions.</p>
+          <span class="price">$129.99</span>
+          <button class="add-to-cart" data-item="Wireless Headphones">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=500&q=80" alt="Home office desk" />
+          <h3>Home Office Desk</h3>
+          <p>Modern design with storage space and durable finish.</p>
+          <span class="price">$159.99</span>
+          <button class="add-to-cart" data-item="Home Office Desk">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="daily-deals" id="products">
+      <div class="section-header">
+        <h2>Today's top deals</h2>
+        <p>Limited-time savings across categories.</p>
+      </div>
+      <div class="deal-carousel" id="dealCarousel">
+        <button class="carousel-control" id="prevDeal" aria-label="Previous deal">‹</button>
+        <div class="carousel-track">
+          <article class="deal-card active">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Gaming laptop" />
+            <h3>Gaming Laptop</h3>
+            <p>Powerful performance for immersive gaming.</p>
+            <span class="price">$999.00</span>
+          </article>
+          <article class="deal-card">
+            <img src="https://images.unsplash.com/photo-1575908528632-4c4f179311aa?auto=format&fit=crop&w=600&q=80" alt="Kitchen appliance" />
+            <h3>Kitchen Essentials</h3>
+            <p>Premium cookware with easy cleanup.</p>
+            <span class="price">$49.99</span>
+          </article>
+          <article class="deal-card">
+            <img src="https://images.unsplash.com/photo-1567016542212-2607d1505d0c?auto=format&fit=crop&w=600&q=80" alt="Fitness tracker" />
+            <h3>Fitness Tracker</h3>
+            <p>Track workouts, sleep, and heart rate.</p>
+            <span class="price">$39.99</span>
+          </article>
+        </div>
+        <button class="carousel-control" id="nextDeal" aria-label="Next deal">›</button>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="newsletter-content">
+        <h2>Start your free trial of Prime</h2>
+        <p>Fast delivery, exclusive shows, and member-only savings.</p>
+        <form id="newsletterForm">
+          <input type="email" placeholder="Enter your email" aria-label="Enter your email" required />
+          <button type="submit">Start Free Trial</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h4>Get to know us</h4>
+        <a href="#">Careers</a>
+        <a href="#">About Amazon</a>
+      </div>
+      <div>
+        <h4>Make money with us</h4>
+        <a href="#">Sell products</a>
+        <a href="#">Advertise</a>
+      </div>
+      <div>
+        <h4>Let us help you</h4>
+        <a href="#">Your Orders</a>
+        <a href="#">Shipping Rates</a>
+      </div>
+    </div>
+    <p class="footer-note">© 2026 Amazon Demo. This is a challenge recreation.</p>
+  </footer>
+
+  <script src="challenge.js"></script>
+</body>
+</html>
