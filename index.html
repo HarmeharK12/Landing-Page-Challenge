@@ -3,177 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amazon Landing Page Challenge</title>
+  <title>Amazon Clone Landing Page</title>
   <link rel="stylesheet" href="challenge.css" />
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="header-top">
-      <a href="#" class="logo" aria-label="Amazon logo">
-        <span class="logo-mark">a</span>
-        <span class="logo-text">mazon</span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="top-nav" id="topNav">
-        <a href="#">All</a>
-        <a href="#">Best Sellers</a>
-        <a href="#">Prime</a>
-        <a href="#">Customer Service</a>
-        <a href="#">Gift Ideas</a>
-      </nav>
-      <div class="search-bar">
-        <select aria-label="Search category">
-          <option>All</option>
-          <option>Electronics</option>
-          <option>Clothing</option>
-          <option>Home</option>
-          <option>Beauty</option>
-        </select>
-        <input type="search" id="searchInput" placeholder="Search Amazon" aria-label="Search Amazon" />
-        <button id="searchButton" aria-label="Search">Search</button>
+      <div class="brand-row">
+        <a href="#" class="logo" aria-label="Amazon Canada">
+          <span class="logo-base">amazon</span>
+          <span class="logo-suffix">.ca</span>
+        </a>
+        <div class="location-panel">
+          <span class="location-label">Delivering to</span>
+          <strong>Whitby L1N</strong>
+          <button class="location-button" type="button">Update location</button>
+        </div>
       </div>
+
+      <form class="search-panel" id="searchForm">
+        <div class="search-category">
+          <select id="searchCategory" aria-label="Search category">
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="fashion">Fashion</option>
+            <option value="home">Home</option>
+            <option value="beauty">Beauty</option>
+            <option value="books">Books</option>
+          </select>
+        </div>
+        <input id="searchInput" type="search" placeholder="Search Amazon.ca" aria-label="Search Amazon.ca" />
+        <button id="searchButton" type="submit" aria-label="Search">🔍</button>
+      </form>
+
       <div class="header-actions">
-        <div class="nav-item">
-          <span class="nav-line-1">Hello, Sign in</span>
-          <span class="nav-line-2">Account & Lists</span>
-        </div>
-        <div class="nav-item">
-          <span class="nav-line-1">Returns</span>
-          <span class="nav-line-2">& Orders</span>
-        </div>
-        <div class="cart">
+        <button class="lang-button" type="button">EN</button>
+        <a href="#" class="action-link">
+          <span class="action-small">Hello,</span>
+          <span class="action-large">Sign in</span>
+          <span class="action-mini">Account & Lists</span>
+        </a>
+        <a href="#" class="action-link">
+          <span class="action-small">Returns</span>
+          <span class="action-large">& Orders</span>
+        </a>
+        <a href="#" class="cart-link">
           <span class="cart-count" id="cartCount">0</span>
-          <span>Cart</span>
-        </div>
+          <span class="cart-text">Cart</span>
+        </a>
       </div>
+    </div>
+
+    <div class="nav-row">
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-label="Open menu">☰ All</button>
+      <nav class="primary-nav" id="primaryNav">
+        <a href="#">Amazon Haul</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">AmazonBasics</a>
+        <a href="#">New Releases</a>
+        <a href="#">Deals Store</a>
+        <a href="#">Electronics</a>
+        <a href="#">Music</a>
+        <a href="#">Home</a>
+        <a href="#">Home Improvement</a>
+        <a href="#">Sports & Outdoors</a>
+        <a href="#">Fashion</a>
+        <a href="#">Prime | Movies and TV Shows</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero-section">
+    <section class="hero-banner">
       <div class="hero-copy">
-        <p class="eyebrow">Shop today & save</p>
-        <h1>Find everything from electronics to home essentials.</h1>
-        <p>Discover fast delivery, exclusive deals, and curated picks for every budget.</p>
-        <div class="hero-actions">
-          <a href="#products" class="primary-button">Shop Deals</a>
-          <a href="#featured" class="secondary-button">Explore Prime</a>
-        </div>
+        <span class="eyebrow">New on Amazon!</span>
+        <h1>Grow anything, all year round</h1>
+        <p>AeroGarden brings indoor gardening to your kitchen with easy setup and fast delivery.</p>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1526178610270-7d3c23d5a55c?auto=format&fit=crop&w=900&q=80" alt="Shopping and delivery" />
+        <img src="https://images.unsplash.com/photo-1526178610270-7d3c23d5a55c?auto=format&fit=crop&w=1300&q=80" alt="AeroGarden growing plants indoors" />
       </div>
     </section>
 
-    <section class="callouts">
-      <div class="callout-card">
-        <h3>Free delivery</h3>
-        <p>On millions of items with Prime.</p>
-      </div>
-      <div class="callout-card">
-        <h3>Today's Deals</h3>
-        <p>New discounts added hourly.</p>
-      </div>
-      <div class="callout-card">
-        <h3>Easy returns</h3>
-        <p>Hassle-free returns on eligible items.</p>
-      </div>
+    <section class="feature-grid">
+      <article class="feature-card wide-card">
+        <div class="card-header">
+          <span>New on Amazon: Plaud</span>
+        </div>
+        <img src="https://redstoneusainc.com/wp-content/uploads/2026/03/plaud-note-pro-1.webp" alt="Plaud portable charger" />
+        <a href="#">Shop all</a>
+      </article>
+
+      <article class="feature-card small-card">
+        <div class="mini-grid">
+          <a href="#">
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=400&q=80" alt="Home and kitchen cookware" />
+            <span>Home & Kitchen</span>
+          </a>
+          <a href="#">
+            <img src="https://themoodguide.com/wp-content/uploads/2022/11/chic-light-academia-aesthetic-outfit-579x730.jpg" alt="Fashion outfit" />
+            <span>Fashion</span>
+          </a>
+          <a href="#">
+            <img src="https://canadianbusiness.com/wp-content/uploads/2024/06/cult-classic-beauty-products-featured.jpg" alt="Beauty makeup products" />
+            <span>Beauty</span>
+          </a>
+          <a href="#">
+            <img src="https://titan.fitness/cdn/shop/files/Benches-Category-Section-TF.webp?v=1710777446&width=500" alt="Sports equipment benches" />
+            <span>Sports & Outdoors</span>
+          </a>
+        </div>
+        <a href="#">Find top picks</a>
+      </article>
+
+      <article class="feature-card small-card">
+        <div class="mini-grid">
+          <a href="#">
+            <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=400&q=80" alt="Blue cap gift" />
+            <span>Our Top 100+</span>
+          </a>
+          <a href="#">
+            <img src="https://m.media-amazon.com/images/I/61jqiNGMXbL._AC_UF894,1000_QL80_.jpg" alt="Customer-loved products" />
+            <span>Customer-loved</span>
+          </a>
+          <a href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUoOsJiG1AbqsellKa44OVnBjbPQEX1ZHwsQ&s" alt="Premium brands" />
+            <span>Premium brands</span>
+          </a>
+          <a href="#">
+            <img src="https://i.pinimg.com/736x/41/d3/c1/41d3c187a5042be9e2547896ff36b421.jpg" alt="Gift cards" />
+            <span>Gift cards</span>
+          </a>
+        </div>
+        <a href="#">Shop Father's Day gifts</a>
+      </article>
+
+      <article class="feature-card sign-in-card">
+        <div>
+          <h3>Sign in for your best experience</h3>
+          <a href="#" class="secondary-button">Sign in securely</a>
+        </div>
+        <div class="prime-panel">
+          <span>prime</span>
+          <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=600&q=80" alt="Crime 101 prime show" />
+          <p class="prime-text">TRY PRIME</p>
+          <small>Restrictions apply. See PrimeVideo.com for details.</small>
+        </div>
+      </article>
     </section>
 
-    <section class="featured-section" id="featured">
+    <section class="product-section">
       <div class="section-header">
-        <h2>Featured picks for you</h2>
-        <p>Selected based on trending shopping trends.</p>
+        <h2>Trending deals🔥</h2>
+        <p>Top trending products people are shopping for now.</p>
       </div>
-      <div class="featured-grid">
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=500&q=80" alt="Smart home speaker" />
-          <h3>Smart Speaker</h3>
-          <p>Voice control, premium sound, and smart home integration.</p>
-          <span class="price">$79.99</span>
-          <button class="add-to-cart" data-item="Smart Speaker">Add to Cart</button>
-        </article>
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=500&q=80" alt="Wireless headphones" />
+      <div class="product-row">
+        <article class="product-item">
+          <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MQTR3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=SmFOSTFzWmdkMW1XWjFUWXBDRzdBd2tuVHYzMERCZURia3c5SzJFOTlPZ3oveDdpQVpwS0ltY2w2UW05aU90T0huV2F0Y2F0d1Z0YndiMUgwNXJZQnc" alt="Wireless headphones" />
           <h3>Wireless Headphones</h3>
-          <p>Noise-cancelling comfort for long listening sessions.</p>
-          <span class="price">$129.99</span>
+          <p>Noise-cancelling over-ear headphones with premium sound and long battery life.</p>
+          <span class="price">$599.99</span>
           <button class="add-to-cart" data-item="Wireless Headphones">Add to Cart</button>
         </article>
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=500&q=80" alt="Home office desk" />
-          <h3>Home Office Desk</h3>
-          <p>Modern design with storage space and durable finish.</p>
-          <span class="price">$159.99</span>
-          <button class="add-to-cart" data-item="Home Office Desk">Add to Cart</button>
+        <article class="product-item">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/holly-williams-tennessee-kitchen-644875e1b835b.jpg?crop=0.751xw:1.00xh;0.101xw,0&resize=1120:*" alt="Kitchen countertop" />
+          <h3>Kitchen Countertop</h3>
+          <p>High-quality countertop surface built for busy kitchens, easy to clean, and durable for everyday meal prep.</p>
+          <span class="price">$5,386.58</span>
+          <button class="add-to-cart" data-item="Kitchen Countertop">Add to Cart</button>
         </article>
-      </div>
-    </section>
-
-    <section class="daily-deals" id="products">
-      <div class="section-header">
-        <h2>Today's top deals</h2>
-        <p>Limited-time savings across categories.</p>
-      </div>
-      <div class="deal-carousel" id="dealCarousel">
-        <button class="carousel-control" id="prevDeal" aria-label="Previous deal">‹</button>
-        <div class="carousel-track">
-          <article class="deal-card active">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Gaming laptop" />
-            <h3>Gaming Laptop</h3>
-            <p>Powerful performance for immersive gaming.</p>
-            <span class="price">$999.00</span>
-          </article>
-          <article class="deal-card">
-            <img src="https://images.unsplash.com/photo-1575908528632-4c4f179311aa?auto=format&fit=crop&w=600&q=80" alt="Kitchen appliance" />
-            <h3>Kitchen Essentials</h3>
-            <p>Premium cookware with easy cleanup.</p>
-            <span class="price">$49.99</span>
-          </article>
-          <article class="deal-card">
-            <img src="https://images.unsplash.com/photo-1567016542212-2607d1505d0c?auto=format&fit=crop&w=600&q=80" alt="Fitness tracker" />
-            <h3>Fitness Tracker</h3>
-            <p>Track workouts, sleep, and heart rate.</p>
-            <span class="price">$39.99</span>
-          </article>
-        </div>
-        <button class="carousel-control" id="nextDeal" aria-label="Next deal">›</button>
-      </div>
-    </section>
-
-    <section class="newsletter-section">
-      <div class="newsletter-content">
-        <h2>Start your free trial of Prime</h2>
-        <p>Fast delivery, exclusive shows, and member-only savings.</p>
-        <form id="newsletterForm">
-          <input type="email" placeholder="Enter your email" aria-label="Enter your email" required />
-          <button type="submit">Start Free Trial</button>
-        </form>
+        <article class="product-item">
+          <img src="https://m.media-amazon.com/images/I/81JBOCqNp-L._AC_UY1000_.jpg" alt="Womens loose pullover sweater" />
+          <h3>womens loose pullover sweater</h3>
+          <p>Soft knit sweater featuring a cozy crewneck, oversized fit, and cable knit detailing for spring warmth and style.</p>
+          <span class="price">$55.98</span>
+          <button class="add-to-cart" data-item="Womens Sweater">Add to Cart</button>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
+    <a href="#top" class="back-to-top">Back to top</a>
     <div class="footer-grid">
       <div>
-        <h4>Get to know us</h4>
+        <h4>Get to Know Us</h4>
         <a href="#">Careers</a>
         <a href="#">About Amazon</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Amazon Devices</a>
       </div>
       <div>
-        <h4>Make money with us</h4>
-        <a href="#">Sell products</a>
-        <a href="#">Advertise</a>
+        <h4>Make Money with Us</h4>
+        <a href="#">Sell on Amazon</a>
+        <a href="#">Sell under Amazon Accelerator</a>
+        <a href="#">Advertise Your Products</a>
+        <a href="#">Amazon Pay</a>
       </div>
       <div>
-        <h4>Let us help you</h4>
-        <a href="#">Your Orders</a>
-        <a href="#">Shipping Rates</a>
+        <h4>Amazon Payment Products</h4>
+        <a href="#">Amazon Rewards Visa Signature Cards</a>
+        <a href="#">Amazon.com Store Card</a>
+        <a href="#">Amazon Business Card</a>
+        <a href="#">Shop with Points</a>
+      </div>
+      <div>
+        <h4>Let Us Help You</h4>
+        <a href="#">Your Account</a>
+        <a href="#">Shipping Rates & Policies</a>
+        <a href="#">Returns & Replacements</a>
+        <a href="#">Help</a>
       </div>
     </div>
-    <p class="footer-note">© 2026 Amazon Demo. This is a challenge recreation.</p>
+    <div class="footer-legal">
+      <div class="footer-links">
+        <a href="#">Conditions of Use</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Interest-Based Ads</a>
+      </div>
+      <p>© 2026 Amazon Clone. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="challenge.js"></script>
